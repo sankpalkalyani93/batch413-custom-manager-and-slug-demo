@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Active Persons List</title>
+    </head>
+    <body>
+        <h2>Active Persons</h2>
+        <ul>
+            {% for person in active_persons %}
+                <li>
+                    <a href="{% url 'person_detail' slug=person.slug %}" > {{ person.first_name }} {{ person.last_name}} </a>
+                       
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
